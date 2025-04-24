@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Portfolio</title>
+ <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+    }
+    header h1 {
+      font-size: 50px;
+    }
+    .services-container {
+      text-align: center;
+      margin: 50px 10%;
+    }
+
+    .services-title {
+      font-size: 35px;
+      font-weight: bold;
+      color: #f1721c;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .service-box {
+      background-color: #1e293b;
+      border-radius: 10px;
+      padding: 25px;
+      position: relative;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    }
+
+    .service-box:hover,
+    .highlight-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid #f1721c;
+    }
+
+    .service-box h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 13px;
+      color: #bec0c5;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #334155;
+      color: white;
+      border-radius: 50%;
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      padding: 20px 10%;
+    }
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .navigation a:hover {
+      color: #f97316;
+    }
+    .navigation a.active {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .navigation h1 {
+      color: #f97316;
+      font-size: 30px;
+    }
+    .highlight-box {
+      border: 2px solid #f1721c;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    }
+    .highlight-box h3,
+    .highlight-box .arrow-icon {
+      color: #f1721c;
+    }
+
+    .box {
+      border: 1px solid white;
+      padding: 20px;
+      margin: 10px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+      border: 1px solid #f97316;
+    }
+
+    .highlight {
+      color: #f97316;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      /* nav ul {
+        flex-direction: column;
+        gap: 10px;
+      } */
+    }
+  </style>
+</head>
+<body>
+<div>
+    <div class="navigation">
+        <h1>Sanya Garg</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="resume.html" class="active">Resume</a>
+          <a href="portfolio.html" >Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+<div style="margin-left: 10%; margin-right: 10%; text-align: center">
+  <main>
+    <h2 class="highlight" style="text-align: left;">Experience</h2>
+    <div class="box">
+      <p class="highlight">Currently Volunteering</p>
+      <h3>SHE LOVES DATA (UI/UX Designer)</h3>
+      <p>Website Redesign & Enhanced User Engagement</p>
+    </div>
+    <div class="box">
+      <p class="highlight">Feb 23 - Ongoing</p>
+      <h3>HLP SOCIAL SQUARE (Jr. Architect)</h3>
+      <p>Landscaping, Site Visits, Material Selection, Structural Enhancements</p>
+    </div>
+    <div class="box">
+      <p class="highlight">June 21 - Nov 21</p>
+      <h3>RENU KHANNA AND ASSOCIATES (Intern)</h3>
+      <p>Project Planning, War Memorial 1857, ESIC Hospital, Ved Niketan Ashram</p>
+    </div>
+
+    <h2 class="highlight" style="text-align:left;">Certifications</h2>
+    <div class="box">
+      <p>KAARWAN ADVANCE UI-UX DESIGN COURSE</p>
+      <p>GROWTH SCHOOL UX COURSE</p>
+    </div>
+
+    <h2 class="highlight" style="text-align: left;">Education</h2>
+    <div class="box">
+      <p>Bachelor of Architecture (2017-2022)</p>
+      <p>Chitkara University</p>
+      <p>Eleventh and Twelfth (2015-2017)</p>
+      <p>Sacred Heart Sr. Sec. School, Chandigarh</p>
+    </div>
+
+    <h2 class="highlight" style="text-align: left;">Skills & Tools</h2>
+    <div class="box">
+      <p>Research, User Interview, Wireframe, Visual Design, UI/UX Design</p>
+      <p>Adobe Photoshop, Figma, SketchUp, AutoCAD, Revit</p>
+    </div>
+  </main>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* header {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    header h1 {
+      font-size: 50px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f1721c;
+      font-weight: bold;
+    } */
+
+    .services-container {
+      text-align: center;
+      margin: 50px 10%;
+    }
+
+    .services-title {
+      font-size: 35px;
+      font-weight: bold;
+      color: #f1721c;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .service-box {
+      background-color: #1e293b;
+      border-radius: 10px;
+      padding: 25px;
+      position: relative;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid #f1721c;
+    }
+
+    .service-box h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 13px;
+      color: #bec0c5;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      padding: 20px 10%;
+    }
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .navigation a:hover {
+      color: #f97316;
+    }
+    .navigation a.active {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .navigation h1 {
+      color: #f97316;
+      font-size: 30px;
+    }
+    .arrow-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #334155;
+      color: white;
+      border-radius: 50%;
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+
+    .highlight-box {
+      border: 2px solid #f1721c;
+    }
+    .highlight-box h3,
+    .highlight-box .arrow-icon {
+      color: #f1721c;
+    }
+  </style>
+</head>
+<body>
+    <div class="navigation">
+        <h1>Portfolio.</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div id="services" class="services-container">
+      <h2 class="services-title">My Services</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>User Research</h3>
+          <p>Conducting user interviews, surveys, and usability testing to understand user needs and behaviors.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+        <div class="service-box">
+          <h3>Wireframing and Prototyping</h3>
+          <p>Creating low-fidelity wireframes and interactive prototypes to visualize and refine the layout, navigation, and functionality of a product.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+        <div class="service-box">
+          <h3>Visual Design</h3>
+          <p>Creating visually appealing and consistent designs that align with the brand's identity.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+        <div class="service-box">
+          <h3>Usability Testing and Feedback</h3>
+          <p>Conducting usability testing to identify areas for improvement and provide actionable feedback to stakeholders.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+        <div class="service-box">
+          <h3>Interaction Design</h3>
+          <p>Designing intuitive and engaging interactions that enhance the user experience.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+        <div class="service-box">
+          <h3>Design Strategy and Consulting</h3>
+          <p>Developing a design strategy that aligns with business goals and objectives, and providing expert guidance on UX design best practices.</p>
+          <span class="arrow-icon">&rarr;</span>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
