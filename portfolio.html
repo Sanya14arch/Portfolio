@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .portfolio-logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #f97316;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      padding: 20px 10%;
+    }
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .navigation a:hover {
+      color: #f97316;
+    }
+    .navigation a.active {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .navigation h1 {
+      color: #f97316;
+      font-size: 30px;
+    }
+    .carousel {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .slides {
+      display: flex;
+      width: 200%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 40px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    .text-box {
+      max-width: 45%;
+    }
+    .text-box h2 {
+      font-size: 30px;
+      color: #f97316;
+    }
+    .text-box p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .image-box {
+      max-width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+    .image-box img {
+      width: 80%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+    }
+    .video-box {
+      width: 400px;
+      height: 250px;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 18px;
+      border-radius: 10px;
+      margin-left: 100px;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    #slide1:checked ~ .carousel .slides {
+      transform: translateX(0%);
+    }
+    #slide2:checked ~ .carousel .slides {
+      transform: translateX(-100%);
+    }
+    .arrow-controls {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    .arrow-controls button {
+      font-size: 30px;
+      color: white;
+      background: rgba(249, 115, 22, 0.7);
+      padding: 10px 15px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .arrow-controls button:hover {
+      background: #f97316;
+    }
+  </style>
+</head>
+<body>
+    <div class="navigation">
+      <h1>Portfolio.</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+  <input type="radio" name="radio-btn" id="slide1" checked>
+  <input type="radio" name="radio-btn" id="slide2">
+
+  <div class="carousel">
+    <div class="slides">
+      <div class="slide">
+        <div class="text-box">
+          <h2>Latest <span>Projects</span></h2>
+          <h1>01 UX Case Study</h1>
+          <h3>Digital Journal App</h3>
+          <p><strong>CIAO your stress</strong></p>
+          <h3>Capture, Inscribe and Organize</h3>
+          <p>Unleash your creativity and express yourself with our digital journaling platform.</p>
+        </div>
+        <div class="image-box">
+          <img src="./images/App.png" alt="Project Screenshot" height="100px">
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="text-box">
+          <h2>Latest <span>Projects</span></h2>
+          <h1>02 Trash to Art</h1>
+          <h3>Sustainabilty</h3>
+          <p><strong>Rupees zero to Profit</strong></p>
+          <h3>If we can, you can too</h3>
+          <p>What once was discarded finds new life in creativity art is not in the material.</p>
+        </div>
+        <div class="video-box">
+          <div style="margin-bottom: 28px">
+            <video width="400" height="300" controls="controls">
+                <source src="images\1Copy of Artists of Dadaism by Slidesgo (1).mp4" type="video/mp4"/>
+            </video>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-controls">
+    <button onclick="moveSlide(-1)">‹</button>
+    <button onclick="moveSlide(1)">›</button>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+
+    function moveSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide > 2) currentSlide = 1;
+      if (currentSlide < 1) currentSlide = 2;
+      document.getElementById('slide' + currentSlide).checked = true;
+    }
+  </script>
+</body>
+</html>

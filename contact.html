@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+    }
+    .navigation h1 {
+      color: #f97316;
+      font-size: 30px;
+    }
+    .navigation a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .navigation a:hover {
+      color: #f97316;
+    }
+    .navigation a.active {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 10%;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin: 50px 10%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-info, .contact-form {
+      width: 48%;
+    }
+    .contact-info h2, .contact-form h2 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .contact-info p {
+      color: #b0b0b0;
+      margin-bottom: 10px;
+    }
+    .contact-info .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .contact-info .contact-item span {
+      color: #f97316;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+      .contact-info, .contact-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navigation">
+      <h1>Portfolio.</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="resume.html">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-section">
+    <div class="contact-info">
+      <h2>Let's Work Together</h2>
+      <p>And make this happen!</p>
+      <div class="contact-item">
+        <span>📞 Phone:</span> (+91) 8847274126
+      </div>
+      <div class="contact-item">
+        <span>📧 Email:</span> sanyagarg170@gmail.com
+      </div>
+      <div class="contact-item">
+        <span>📍 Address:</span> 123 Anywhere Street, Chandigarh
+      </div>
+    </div>
+  </div>
+</body>
+</html>
